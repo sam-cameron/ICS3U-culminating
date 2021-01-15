@@ -17,7 +17,7 @@ public class EnhancedBlackJack {
     public static int bot_difficulty;
 
     // The value assigned to bust_card is a placeholder
-    public static String bust_card = "x";
+    public static String bust_card = "temp";
 
     public static final ArrayList<String> deck = new ArrayList<>();
 

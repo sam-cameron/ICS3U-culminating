@@ -1,0 +1,17 @@
+
+Enhanced BlackJack
+
+
+Structure:
+
+Setup
+    Intro, Rules, Bot Difficulty, Initializing and shuffling deck, Dealing
+Deck
+Chips
+Play (Considering bot level) -
+    Betting, Hitting or Stopping, Busting
+    Special Scenarios -
+        Blackjacks, Ties, Winning next hand with the previous hand's bust card (if it had one)
+
+End of the Game -
+    Player reaches 0 chips

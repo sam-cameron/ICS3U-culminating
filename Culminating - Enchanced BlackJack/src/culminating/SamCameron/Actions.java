@@ -297,6 +297,9 @@ public class Actions {
 
             if(trivia_win) {
                 EnhancedBlackJack.player_chips += EnhancedBlackJack.pot;
+                EnhancedBlackJack.pot = 0;
+                System.out.println("Chips: " + EnhancedBlackJack.player_chips);
+                hand();
             }
         }
         EnhancedBlackJack.pot = 0;

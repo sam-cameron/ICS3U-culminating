@@ -29,6 +29,7 @@ public class Utilities {
         if(!options.contains(input)) {
             System.out.print("Please choose one of the options provided: ");
             input = sc.nextLine();
+            input = stringChooser(input, options);
         }
 
         return input;

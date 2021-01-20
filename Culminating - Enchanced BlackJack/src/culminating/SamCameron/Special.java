@@ -91,15 +91,14 @@ public class Special {
             {
                 add("How tall is the CN Tower?");
                 add("What is the only edible food that never expires?");
-                add("What was the first name of the person who built " +
-                        "the first solid body electric guitar?");
                 add("Approximately, how many times larger is the sun than the Earth (volume)?");
                 add("When was Starbucks established?");
                 add("What was the name of Adolf Hitler's political party (abbr.)?");
                 add("Early American colonists boiled blueberries in milk to make what?");
-                add("In what type of matter are atoms most tightly packed?");
+                add("In what state of matter are atoms most tightly packed?");
                 add("What is the fear of long words known as?");
                 add("What does NATO stand for?");
+                add("What is a female donkey called?");
             }
         };
 

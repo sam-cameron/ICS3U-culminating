@@ -14,13 +14,29 @@ D) Rye
 +
 C
 -
-What was the first name of the person who built the first solid body electric guitar?
-A) Reginald
-B) Arnold
-C) Adolf
-D) Maurice
+When was Starbucks established?
+A) 1970
+B) 1971
+C) 1972
+D) 1973
++
+B
+-
+What was the name of Adolf Hitler's political party (abbr.)?
+A) NSPDA
+B) NDSAP
+C) NSDAP
+D) NSDPA
 +
 C
+-
+Early American colonists boiled blueberries in milk to make what?
+A) Medicine
+B) A tasty drink
+C) Blueberry Custard
+D) Grey Paint
++
+D
 -
 Approximately, how many times larger is the sun than the Earth (volume)?
 A) 1.5 Thousand
@@ -29,4 +45,28 @@ C) 2.3 Million
 D) 1.3 Million
 +
 D
+-
+In what state of matter are atoms most tightly packed?
+A) Gas
+B) Liquid
+C) Solid
+D) Plasma
++
+C
+-
+What is the fear of long words known as?
+A) Hippopotomostrosesquippedaliophobia
+B) Hippoppotomostrosesquppedaliophobia
+C) Hipopotomostrosesquiappedaliophobia
+D) Hippophobia
++
+A
+-
+What does NATO stand for?
+A) North Atlantic Treaty Organization
+B) Nobody Attack The Ocean
+C) North Adriatic Treaty Organization
+D) No A The On
++
+A
 -

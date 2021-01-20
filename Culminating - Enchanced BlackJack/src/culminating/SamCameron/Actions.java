@@ -301,9 +301,6 @@ public class Actions {
 
             if(special.trivia()) {
                 EnhancedBlackJack.player_chips += EnhancedBlackJack.pot;
-                EnhancedBlackJack.pot = 0;
-                System.out.println("Chips: " + EnhancedBlackJack.player_chips);
-                hand();
             }
         }
 

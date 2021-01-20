@@ -7,6 +7,8 @@ public class Special {
 
     private final Scanner sc = new Scanner(System.in);
 
+    ArrayList<String> questions = new ArrayList<>();
+
     public boolean mathQuestion() {
 
         Random rnd = new Random();
@@ -85,17 +87,29 @@ public class Special {
 
         BufferedReader reader = new BufferedReader(new FileReader("trivia.txt"));
         String line = reader.readLine();
-        ArrayList<String> questions = new ArrayList<>() {
+        ArrayList<String> all_questions = new ArrayList<>() {
             {
                 add("How tall is the CN Tower?");
                 add("What is the only edible food that never expires?");
                 add("What was the first name of the person who built " +
                         "the first solid body electric guitar?");
                 add("Approximately, how many times larger is the sun than the Earth (volume)?");
+                add("When was Starbucks established?");
+                add("What was the name of Adolf Hitler's political party (abbr.)?");
+                add("Early American colonists boiled blueberries in milk to make what?");
+                add("In what type of matter are atoms most tightly packed?");
+                add("What is the fear of long words known as?");
+                add("What does NATO stand for?");
             }
         };
 
-        String question = questions.get(rnd.nextInt(questions.size()));
+        if(questions.size() == 0) {
+            questions.addAll(all_questions);
+        }
+
+        int index = rnd.nextInt(questions.size());
+
+        String question = questions.remove(index);
 
         while(!line.equals(question)) {
             line = reader.readLine();
@@ -108,6 +122,7 @@ public class Special {
         }
         System.out.print("Answer: ");
         String answer = sc.nextLine();
+        answer = answer.toUpperCase();
 
         ArrayList<String> options = new ArrayList<>() {
             {
@@ -118,7 +133,7 @@ public class Special {
             }
         };
 
-        answer = Utilities.stringChooser(answer.toUpperCase(), options);
+        answer = Utilities.stringChooser(answer, options);
         line = reader.readLine();
 
         if(answer.equals(line)) {

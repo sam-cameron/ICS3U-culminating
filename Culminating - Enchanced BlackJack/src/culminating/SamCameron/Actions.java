@@ -124,6 +124,8 @@ public class Actions {
             if(temp_aces > 0) {
                 sum -= 10;
                 temp_aces -= 1;
+            } else {
+                return sum;
             }
         }
 
@@ -164,7 +166,7 @@ public class Actions {
         if (sumOfCards(cards) == 21) {
             System.out.println("BlackJack! Get ready to answer a math question!");
             if (special.mathQuestion()) {
-                System.out.println("You got the answer right!");
+                System.out.println("You got the answer right! You won double the pot.");
                 EnhancedBlackJack.pot += EnhancedBlackJack.pot;
                 endHand(sumOfCards(EnhancedBlackJack.player_cards),
                         sumOfCards(EnhancedBlackJack.bot_cards), EnhancedBlackJack.player_cards);
@@ -235,6 +237,7 @@ public class Actions {
         if(sumOfCards(EnhancedBlackJack.player_cards) > 21) {
             endHand(sumOfCards(EnhancedBlackJack.player_cards), sumOfCards(EnhancedBlackJack.bot_cards),
                     EnhancedBlackJack.player_cards);
+            return;
         }
 
         String hoh;
@@ -253,6 +256,7 @@ public class Actions {
             case "2":
                 endHand(sumOfCards(EnhancedBlackJack.player_cards),
                         sumOfCards(EnhancedBlackJack.bot_cards), EnhancedBlackJack.player_cards);
+                return;
             default:
                 break;
         }
@@ -268,18 +272,19 @@ public class Actions {
         if(p_sum == 21 && p_cards.size() == 2) {
             EnhancedBlackJack.player_chips += EnhancedBlackJack.pot;
 
-        } else if (p_sum > 21 && b_sum <= 21) {
+        } else if(p_sum > 21 && b_sum <= 21) {
             System.out.println("\nBUST!\n");
             EnhancedBlackJack.bust_card = Utilities.getLast(p_cards);
 
-        } else if (p_sum > 21) {
+        } else if(p_sum > 21) {
             System.out.println("\nYou both went over.\n");
             EnhancedBlackJack.bust_card = Utilities.getLast(p_cards);
 
-        } else if (b_sum > 21) {
+        } else if(b_sum > 21) {
             System.out.println("\nThe house went over. You win!\n");
+            EnhancedBlackJack.player_chips += EnhancedBlackJack.pot;
 
-        } else if (p_sum > b_sum) {
+        } else if(p_sum > b_sum) {
             System.out.println("\nYou won the hand!\n");
             boolean bust_win = special.winWithBust();
             if(bust_win) {
@@ -288,20 +293,20 @@ public class Actions {
             }
             EnhancedBlackJack.player_chips += EnhancedBlackJack.pot;
 
-        } else if (b_sum > p_sum) {
+        } else if(b_sum > p_sum) {
             System.out.println("\nYou lost the hand!\n");
 
         } else {
             System.out.println("\nYou tied . . . TRIVIA TIME!\n");
-            boolean trivia_win = special.trivia();
 
-            if(trivia_win) {
+            if(special.trivia()) {
                 EnhancedBlackJack.player_chips += EnhancedBlackJack.pot;
                 EnhancedBlackJack.pot = 0;
                 System.out.println("Chips: " + EnhancedBlackJack.player_chips);
                 hand();
             }
         }
+
         EnhancedBlackJack.pot = 0;
         System.out.println("Chips: " + EnhancedBlackJack.player_chips);
     }

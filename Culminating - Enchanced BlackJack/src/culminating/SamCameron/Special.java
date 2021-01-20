@@ -13,10 +13,10 @@ public class Special {
         Scanner sc = new Scanner(System.in);
 
         ArrayList<String> operators = new ArrayList<>();
-        operators.add("+");
-        operators.add("-");
-        operators.add("*");
-        operators.add("/");
+        operators.add(" + ");
+        operators.add(" - ");
+        operators.add(" * ");
+        operators.add(" / ");
 
         String operator = operators.get(rnd.nextInt(3));
 
@@ -27,8 +27,8 @@ public class Special {
 
 
         switch (operator) {
-            case "+":
-                System.out.print(num1 + operator + num2 + "= ");
+            case " + ":
+                System.out.print(num1 + operator + num2 + " = ");
                 answer = sc.nextInt();
 
                 // Consume the new line so it doesn't pass over an input
@@ -37,8 +37,8 @@ public class Special {
                 return answer == num1 + num2;
 
 
-            case "-":
-                System.out.print(num1 + operator + num2 + "= ");
+            case " - ":
+                System.out.print(num1 + operator + num2 + " = ");
                 answer = sc.nextInt();
 
                 // Consume the new line so it doesn't pass over an input
@@ -47,8 +47,8 @@ public class Special {
                 return answer == num1 - num2;
 
 
-            case "*":
-                System.out.print(num1 + operator + num2 + "= ");
+            case " * ":
+                System.out.print(num1 + operator + num2 + " = ");
                 answer = sc.nextInt();
 
                 // Consume the new line so it doesn't pass over an input
@@ -57,8 +57,8 @@ public class Special {
                 return answer == num1 * num2;
 
 
-            case "/":
-                System.out.print(num1 + operator + num2 + " (rounded down to the nearest tenth)= ");
+            case " / ":
+                System.out.print(num1 + operator + num2 + " (rounded down to the nearest tenth) = ");
                 answer = sc.nextInt();
 
                 // Consume the new line so it doesn't pass over an input
